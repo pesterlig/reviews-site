@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>Beer Barrel Review</title>
+	<link rel="stylesheet" type="text/css" href="normalize.css"/>
+	<link rel="stylesheet" type="text/css" href="layout.css"/>
+	<link rel="stylesheet" type="text/css" href="style.css"/> 
+</head>
+
+
+	<body>
+	<div class="landing-page">
+		<img class="heroImage" src="images/boxes-on-heads-at-barley-hopsters-download.jpg" />
+
+
+
+		<header>
+
+			<h1>Beer Barrel Review</h1>
+
+
+		</header>
+
+
+		<div th:each="review: ${reviews}">
+			<h2>
+				<a th:href="@{/review(id=${review.getId()})}" th:text="${review.getTitle()}"></a>
+			</h2>
+		</div>
+
+		<footer>
+			<h3> Copyright BBR 2017</h3>
+		</footer>
+
+	</div>
+</body>
+</html>

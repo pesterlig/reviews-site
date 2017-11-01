@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>Beer Barrel Review</title>
+	<link rel="stylesheet" type="text/css" href="normalize.css"></link>
+	<link rel="stylesheet" type="text/css" href="layout.css"/>
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+
+<body>
+	<div class="container">
+		<header>
+			<h1 th:text="${review.getTitle()}"></h1>
+			<img class="pubs" th:src="${review.getLogoImageUrl()}"/>
+		</header>
+
+		<div id='imageWrapper'>
+			
+			<img id="biz" th:src="${review.getImageUrl()}" />
+		
+
+			<img id="product" th:src="${review.getProductImageUrl()}"/>
+		</div>
+
+		<div id="homeButtonWrapper">
+			<a href="http://localhost:8080/reviews">Back to home</a>
+		</div>
+
+		<footer>Bye!</footer>
+
+	</div>
+</body>
+</html>
+
+
+
+
